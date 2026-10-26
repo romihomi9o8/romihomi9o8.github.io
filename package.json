@@ -1,0 +1,13 @@
+{
+  "name": "romihomi9o8-site-dev",
+  "private": true,
+  "description": "Dev-only test tooling for the /brain dashboard. Not needed to serve the site.",
+  "type": "module",
+  "scripts": {
+    "test": "node --test \"tests/brain/*.test.mjs\"",
+    "smoke": "node tests/brain/smoke.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.47.0"
+  }
+}
