@@ -3,7 +3,7 @@
 This repo hosts Roman's Second Brain dashboard (`brain/`, served at https://romihomi9o8.github.io/brain/) and its docs. The site root is reserved for a future personal website.
 
 - **Start here:**
-  - The brain's rules live in the Google Doc "START HERE" in Drive `00 Brain` (id `1tDofVCR6ySzW2Ra0fADFzAQ5WKspfSyRJusgip17Lwc`).
+  - The brain's rules live in the Google Doc "START HERE" in Drive `00 Brain` (id `1jHmgz775t5pTHsdzFi57a82kRenhH5TMpvJNo1Cae0I`).
   - Spec: `docs/superpowers/specs/2026-10-26-second-brain-design.md`
   - Plan: `docs/superpowers/plans/2026-10-26-second-brain-plan.md`
 - **Picking up unfinished work:** `docs/handoff/local-session.md`

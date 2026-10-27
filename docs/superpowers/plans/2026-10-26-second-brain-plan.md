@@ -14,9 +14,10 @@ Status legend: ✅ done · 🔄 in progress · ⏳ waiting on Roman · 🤖 Code
 | A4 | Build Brain Registry from the Iris `_state` (11 projects, 8 team, 27 questions) + 43 artifacts; upload, then verify that a round-trip download matches | ✅ |
 | A5 | START HERE doc in `00 Brain` | ✅ |
 | A6 | `_CONTEXT` doc per active project/area (13) | 🔄 |
-| A7 | Move plan: inventory → target path per file/folder, written to the Move Manifest before any move | ⏳ after A1 |
-| A8 | Execute moves via `update_file(parentId)`, marking each manifest row `done` | ⏳ |
-| A9 | Verify: file count per old root = count found under new paths; spot-check 10 IDs; old roots emptied then moved to `4 Archive` | ⏳ |
+| A7 | Move plan: inventory → target path per file/folder, written to the Move Manifest before any move | ✅ 55 rows |
+| A8 | Execute moves via `update_file(parentId)`, marking each manifest row `done` | ✅ 55/55 (2026-10-27) |
+| A9 | Verify: file count per old root = count found under new paths; spot-check 10 IDs; old roots emptied then moved to `4 Archive` | ✅ root clean, 10/10 IDs match, old roots in `4 Archive/_old roots` |
+| A11 | Cleanup: compare near-duplicate folders, list junk in "Cleanup candidates" (`00 Brain`), folder colors, star START HERE + Registry | ✅ no duplicates were safe to archive (each copy has unique files); junk listed for Roman |
 | A10 | Move both Iris Hub sheets to `4 Archive/Iris (retired)` once the sync is off (B2) | ⏳ |
 
 ## Track B — Mac (Codex, run by Roman)

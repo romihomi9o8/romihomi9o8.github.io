@@ -6,7 +6,7 @@ Paste below the line into Codex on Roman's Mac, starting from `~`.
 
 Connect each of my local project repos to my Second Brain so every Claude Code and Codex session starts with context and ends with a session log.
 
-The brain's rules live in the Google Doc "START HERE": https://docs.google.com/document/d/1tDofVCR6ySzW2Ra0fADFzAQ5WKspfSyRJusgip17Lwc
+The brain's rules live in the Google Doc "START HERE": https://docs.google.com/document/d/1jHmgz775t5pTHsdzFi57a82kRenhH5TMpvJNo1Cae0I
 
 Drive for Desktop mounts My Drive at `~/Library/CloudStorage/GoogleDrive-romimodhera@gmail.com/My Drive`.
 
