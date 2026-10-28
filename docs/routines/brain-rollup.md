@@ -12,6 +12,10 @@ This prompt runs as a scheduled cloud agent every day at 6:00 am America/Chicago
   ```
   If `PY` is still empty, run `python3 -m pip install -q openpyxl` and set `PY=python3`.
 - Large exports: `download_file_content` with an xlsx `exportMimeType` returns base64 and is often saved to a tool-results file. Decode that file with `$PY`; don't paste it.
+- **Read the Registry from an xlsx export**, not `read_file_content`. That view truncates long tabs (it showed 28 of 50 Links rows).
+- **Write CSVs with Python's `csv` module** (`csv.writer(..., quoting=csv.QUOTE_MINIMAL)`), never by hand. Hand-quoted rows break on commas inside fields.
+- **Rewrite every feed on every run**, even if its sources didn't change: carry the previous content forward and set a new `generated_at`. Dashboards mark a feed as stale after 30 hours, so a feed left in place looks broken.
+- **Local-only sources:** a recipe source that lives on Roman's Mac (e.g. `~/Projects/...`) isn't reachable from the cloud. Carry that part forward from the previous feed unchanged, and refresh only the Drive and Registry parts.
 - Stable folder IDs (file IDs change; always find files by title inside these folders):
 
 | Folder | ID |
