@@ -6,6 +6,12 @@ This prompt runs as a scheduled cloud agent every day at 6:00 am America/Chicago
 
 - Repo: `romihomi9o8/romihomi9o8.github.io`, branch `claude/google-drive-second-brain-gk8t5d`. Use it for `dashboards/kit/validate.mjs` and these recipes.
 - Connector: Google Drive. Never trash, share, or send anything. Never write anywhere outside `00 Brain/`.
+- Python: the cloud sandbox has several interpreters, and bare `python3` may lack openpyxl. Pick one that has it and use it throughout:
+  ```
+  PY=$(for p in python3.13 python3.12 python3; do command -v $p >/dev/null && $p -c "import openpyxl" 2>/dev/null && { command -v $p; break; }; done)
+  ```
+  If `PY` is still empty, run `python3 -m pip install -q openpyxl` and set `PY=python3`.
+- Large exports: `download_file_content` with an xlsx `exportMimeType` returns base64 and is often saved to a tool-results file. Decode that file with `$PY`; don't paste it.
 - Stable folder IDs (file IDs change; always find files by title inside these folders):
 
 | Folder | ID |
