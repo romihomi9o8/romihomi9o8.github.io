@@ -1,0 +1,19 @@
+{
+ "feed": "sessions",
+ "generated_at": "2026-10-27T11:00:00Z",
+ "sessions": [
+  {
+   "date": "2026-10-26",
+   "title": "2026-10-26 chord claude example",
+   "owner": "rafael",
+   "project": "chord",
+   "roles": [
+    "Example-role"
+   ],
+   "subagents": "1 \u2014 example",
+   "summary": "Example session.",
+   "next_step": "Example",
+   "url": "https://docs.google.com/document/d/example/edit"
+  }
+ ]
+}

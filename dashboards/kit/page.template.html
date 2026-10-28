@@ -1,0 +1,27 @@
+<!-- Copy to dashboards/<name>/page.html. Replace NAME, DOMAIN and FEED. Publish dashboards/dist/<name>.html after `node dashboards/build.mjs <name>`. -->
+<title>NAME</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/*@KIT_CSS*/
+/* page-specific styles below, built only from the kit tokens */
+</style>
+<main id="app" aria-live="polite"></main>
+<script>
+document.documentElement.dataset.domain = "DOMAIN";
+/*@KIT_JS*/
+/*@PANELS_JS*/
+boot({
+  feed: "FEED",
+  render: (feed, file, mcp) => [
+    headerBlock(feed, file),
+    statusPanel(feed),
+    // domain panels from panels.js go here
+    questionsPanel(feed.questions),
+    teamPanel(feed),
+    sessionsPanel(feed.sessions),
+    filesPanel(feed),
+  ],
+});
+</script>

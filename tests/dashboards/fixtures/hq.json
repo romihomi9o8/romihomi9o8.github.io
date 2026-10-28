@@ -1,0 +1,120 @@
+{
+ "feed": "hq",
+ "generated_at": "2026-10-27T11:00:00Z",
+ "domains": [
+  {
+   "feed": "chord",
+   "name": "Chord",
+   "dashboard_url": "https://claude.ai/artifact/example",
+   "owners": [
+    "Rafael Ortiz"
+   ],
+   "status": "active",
+   "next_step": "Example",
+   "open_questions": 1,
+   "last_session": "2026-10-26"
+  },
+  {
+   "feed": "desk",
+   "name": "Agentic Desk",
+   "dashboard_url": "https://claude.ai/artifact/example",
+   "owners": [
+    "Kenji Watanabe"
+   ],
+   "status": "active",
+   "next_step": "Example",
+   "open_questions": 1,
+   "last_session": "2026-10-26"
+  },
+  {
+   "feed": "writing",
+   "name": "Writing",
+   "dashboard_url": "https://claude.ai/artifact/example",
+   "owners": [
+    "Clara Whitfield",
+    "Ezra Kahn"
+   ],
+   "status": "active",
+   "next_step": "Example",
+   "open_questions": 1,
+   "last_session": "2026-10-26"
+  },
+  {
+   "feed": "health",
+   "name": "Health",
+   "dashboard_url": "https://claude.ai/artifact/example",
+   "owners": [
+    "Nadia Brooks"
+   ],
+   "status": "active",
+   "next_step": "Example",
+   "open_questions": 1,
+   "last_session": "2026-10-26"
+  },
+  {
+   "feed": "finance",
+   "name": "Personal Finance",
+   "dashboard_url": "https://claude.ai/artifact/example",
+   "owners": [
+    "Iris"
+   ],
+   "status": "active",
+   "next_step": "Example",
+   "open_questions": 1,
+   "last_session": "2026-10-26"
+  }
+ ],
+ "areas": [
+  {
+   "slug": "leland",
+   "name": "Leland Ventures",
+   "owner": "Theo Mercer",
+   "status": "active",
+   "next_step": "",
+   "open_questions": 2,
+   "last_session": ""
+  }
+ ],
+ "waiting": [
+  {
+   "code": "EX-001",
+   "project": "chord",
+   "question": "Example question?",
+   "options": [
+    "a) Yes",
+    "b) No"
+   ],
+   "default": "a",
+   "default_date": "2026-11-01",
+   "blocks": "example"
+  }
+ ],
+ "sessions_24h": [
+  {
+   "date": "2026-10-26",
+   "title": "2026-10-26 chord claude example",
+   "owner": "rafael",
+   "project": "chord",
+   "roles": [
+    "Example-role"
+   ],
+   "subagents": "1 \u2014 example",
+   "summary": "Example session.",
+   "next_step": "Example",
+   "url": "https://docs.google.com/document/d/example/edit"
+  }
+ ],
+ "rosters": [
+  {
+   "owner": "rafael",
+   "name": "Rafael Ortiz",
+   "roles": [
+    {
+     "role": "Chord-eng",
+     "purpose": "Example",
+     "last_active": ""
+    }
+   ]
+  }
+ ]
+}

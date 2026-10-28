@@ -1,0 +1,117 @@
+{
+ "feed": "writing",
+ "generated_at": "2026-10-27T11:00:00Z",
+ "domain": {
+  "name": "Writing",
+  "status": "active",
+  "summary": "Example summary for Writing. Fixture data, not real.",
+  "next_step": "Example next step",
+  "waiting": ""
+ },
+ "owners": [
+  {
+   "slug": "clara",
+   "name": "Clara Whitfield",
+   "role": "Example role"
+  },
+  {
+   "slug": "ezra",
+   "name": "Ezra Kahn",
+   "role": "Example role"
+  }
+ ],
+ "projects": [
+  {
+   "slug": "substack",
+   "name": "Substack writing",
+   "status": "active",
+   "owner": "clara",
+   "next_step": "",
+   "drive_folder_url": "https://drive.google.com/drive/folders/example",
+   "repo_url": ""
+  },
+  {
+   "slug": "book",
+   "name": "Book",
+   "status": "active",
+   "owner": "ezra",
+   "next_step": "",
+   "drive_folder_url": "https://drive.google.com/drive/folders/example",
+   "repo_url": ""
+  }
+ ],
+ "roles": [
+  {
+   "owner": "clara",
+   "role": "Example-role",
+   "purpose": "Example purpose",
+   "last_active": "2026-10-26",
+   "recent": [
+    "did an example thing (2026-10-26)"
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "code": "EX-001",
+   "project": "substack",
+   "question": "Example question?",
+   "options": [
+    "a) Yes",
+    "b) No"
+   ],
+   "default": "a",
+   "default_date": "2026-11-01",
+   "blocks": "example"
+  }
+ ],
+ "sessions": [
+  {
+   "date": "2026-10-26",
+   "title": "2026-10-26 substack claude example",
+   "owner": "clara",
+   "project": "substack",
+   "roles": [
+    "Example-role"
+   ],
+   "subagents": "1 \u2014 example",
+   "summary": "Example session.",
+   "next_step": "Example",
+   "url": "https://docs.google.com/document/d/example/edit"
+  }
+ ],
+ "files": [
+  {
+   "title": "Example file",
+   "url": "https://drive.google.com/file/d/example/view",
+   "kind": "doc",
+   "updated": "2026-10-20"
+  }
+ ],
+ "artifacts": [
+  {
+   "title": "Example artifact",
+   "url": "https://claude.ai/artifact/example",
+   "updated": "2026-10-01"
+  }
+ ],
+ "panels": {
+  "calendar": [
+   {
+    "date": "2026-11-04",
+    "title": "Example post",
+    "channel": "substack",
+    "status": "draft"
+   }
+  ],
+  "book": {
+   "chapters": [
+    {
+     "name": "Example chapter",
+     "status": "drafting"
+    }
+   ],
+   "consent_open": 1
+  }
+ }
+}

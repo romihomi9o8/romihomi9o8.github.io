@@ -1,0 +1,39 @@
+<!-- Copy to dashboards/<name>/page.html. Replace Writing Room, DOMAIN and FEED. Publish dashboards/dist/<name>.html after `node dashboards/build.mjs <name>`. -->
+<title>Writing Room</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/*@KIT_CSS*/
+/* page-specific styles below, built only from the kit tokens */
+.cal-group { display: grid; gap: 4px; }
+.cal-group + .cal-group { margin-top: 8px; }
+.cal { display: grid; }
+.cal-row { display: grid; grid-template-columns: 5.5rem 1fr auto auto; gap: 4px 10px; align-items: baseline; padding: 6px 0; border-bottom: 1px solid var(--line); }
+.cal-date { color: var(--text-3); font-size: 12px; }
+.cal-title { min-width: 0; overflow-wrap: anywhere; }
+.chan { font: 500 11px var(--mono); text-transform: uppercase; letter-spacing: .05em; color: var(--accent); }
+.chan-book { color: var(--text-2); }
+.chapters { display: grid; gap: 4px; }
+.chapters li { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; }
+@media (max-width: 480px) { .cal-row { grid-template-columns: 1fr auto; } .cal-date { grid-column: 1 / -1; } }
+</style>
+<main id="app" aria-live="polite"></main>
+<script>
+document.documentElement.dataset.domain = "writing";
+/*@KIT_JS*/
+/*@PANELS_JS*/
+boot({
+  feed: "writing",
+  render: (feed, file, mcp) => [
+    headerBlock(feed, file),
+    statusPanel(feed),
+    calendarPanel(feed.panels && feed.panels.calendar),
+    bookPanel(feed.panels && feed.panels.book),
+    ...questionLanes(feed),
+    teamPanel(feed),
+    ...sessionLanes(feed),
+    filesPanel(feed),
+  ],
+});
+</script>

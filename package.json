@@ -1,0 +1,10 @@
+{
+  "name": "romihomi9o8-site-dev",
+  "private": true,
+  "description": "Dev-only tooling for the brain dashboards. Not needed to serve the site.",
+  "type": "module",
+  "scripts": {
+    "test": "node --test \"tests/dashboards/*.test.mjs\"",
+    "build": "node dashboards/build.mjs"
+  }
+}
