@@ -11,7 +11,7 @@ Writes `chord.json` into Drive `00 Brain/Feeds` (folder `1RwTznBFa6cLX-hLSKK22G-
 ## Extraction
 
 - `domain`: status from the Registry project row. `summary` from `_CONTEXT` current state and the build log. `next_step` from `_CONTEXT` Next step, falling back to the build log's Next list; if a source says it is unknown, say so. `waiting` names the open ask codes and any held item.
-- `owners`, `roles`: copy the Rafael roster from `rosters.seed.json`. Set `last_active` and `recent` only when a session doc shows activity.
+- `owners`, `roles`: copy the Rafael roster from the Registry Roles tab. Set `last_active` and `recent` only when a session doc shows activity.
 - `projects`: the Registry row, with `drive_folder_url` and `repo_url` (empty if unknown).
 - `questions`: Registry Questions rows for `chord` with status `open` and no `answer`. Split `options` on " / ". If a row's `context` begins with "HELD", set `held: true` and write a one-line neutral `context` naming the hold and its start date. Held items stay in the feed; the page shows them in the warn tone under their own heading, not as asks.
 - `sessions`: newest 15 matching docs, newest first.

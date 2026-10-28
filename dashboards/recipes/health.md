@@ -10,7 +10,7 @@ Output: `health.json` in `00 Brain/Feeds` (`1RwTznBFa6cLX-hLSKK22G-Zl3NtM_5-h`).
 ## Extraction
 1. Find files by title inside the folders above (IDs change). Read `_CONTEXT` for status, current state and next step.
 2. `domain`: status from Registry; summary and next_step from `_CONTEXT` "Current state" and "Next step", in one or two neutral sentences. `waiting` from open Registry questions, else "".
-3. `owners`/`projects`/`roles`: Registry plus `rosters.seed.json` (empty if none seeded).
+3. `owners`/`projects`/`roles`: Registry plus the Registry Roles tab (empty if none seeded).
 4. `questions`: Registry Questions for `health` with status open and no answer. `sessions`: newest 15 matching the title pattern.
 5. `files`: max 12; the two track docs, `_CONTEXT`, the Health subfolder, newest documents in it, newest first. `artifacts`: Registry Links for `health`, not archived.
 

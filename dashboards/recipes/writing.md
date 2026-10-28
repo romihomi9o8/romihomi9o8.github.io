@@ -12,7 +12,7 @@ Feed: `writing.json` in 00 Brain/Feeds (`1RwTznBFa6cLX-hLSKK22G-Zl3NtM_5-h`). Ow
 ## Extraction
 
 1. `domain`: name "Writing Room". Status from the two Projects rows (active if either is). Summary and next_step from the two `_CONTEXT` docs (Current state, Next step). `waiting` summarizes the open questions in one line, with no private names.
-2. `owners` from Team rows; `roles` from `rosters.seed.json` (Clara and Ezra), `last_active` and `recent` from their sessions, otherwise empty.
+2. `owners` from Team rows; `roles` from the Registry Roles tab (Clara and Ezra), `last_active` and `recent` from their sessions, otherwise empty.
 3. `projects` from Registry Projects. `questions` are rows with status open and no answer. A question about the book (for example the consent register) is filed with `project: "book"` so it lands in Ezra's lane, even if the Registry files it under substack.
 4. `sessions`: newest 15 for both projects, newest first. `files`: at most 12, newest or most important (`_CONTEXT` docs, track doc, corpus folders). `artifacts` from Links.
 

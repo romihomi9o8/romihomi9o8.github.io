@@ -12,7 +12,7 @@ Writes `desk.json` into Drive `00 Brain/Feeds` (folder `1RwTznBFa6cLX-hLSKK22G-Z
 ## Extraction
 
 - `domain`: status from the Registry project row. `summary` from the newest STATE doc plus `_CONTEXT`. `next_step` from the PLAN's current phase or `_CONTEXT`. `waiting` from the STATE doc's waiting-on-Roman list, or "".
-- `owners`, `roles`: copy the Kenji roster from `rosters.seed.json`. Set `last_active` and `recent` only when a session doc shows activity.
+- `owners`, `roles`: copy the Kenji roster from the Registry Roles tab. Set `last_active` and `recent` only when a session doc shows activity.
 - `projects`: the Registry row, with `drive_folder_url` and `repo_url` (empty if unknown).
 - `questions`: Registry Questions rows for `bullseye` with status `open` and no `answer`.
 - `sessions`: newest 15 docs from the Sessions folder matching the project, newest first.

@@ -14,7 +14,7 @@ This prompt runs as a scheduled cloud agent every day at 6:00 am America/Chicago
 - Large exports: `download_file_content` with an xlsx `exportMimeType` returns base64 and is often saved to a tool-results file. Decode that file with `$PY`; don't paste it.
 - **Read the Registry from an xlsx export**, not `read_file_content`. That view truncates long tabs (it showed 28 of 50 Links rows).
 - **Write CSVs with Python's `csv` module** (`csv.writer(..., quoting=csv.QUOTE_MINIMAL)`), never by hand. Hand-quoted rows break on commas inside fields.
-- **Rewrite every feed on every run**, even if its sources didn't change: carry the previous content forward and set a new `generated_at`. Dashboards mark a feed as stale after 30 hours, so a feed left in place looks broken.
+- **Rewrite all seven feeds on every run, with no exceptions:** finance, chord, desk, writing, health, hq and sessions. Do this even if a feed was written minutes ago or its sources didn't change: carry the content forward and set a new `generated_at`. Dashboards mark a feed as stale after 30 hours, and a manual "update the brain" run must leave every feed fresh. Also regenerate the Sessions Index on every run.
 - **Local-only sources:** a recipe source that lives on Roman's Mac (e.g. `~/Projects/...`) isn't reachable from the cloud. Carry that part forward from the previous feed unchanged, and refresh only the Drive and Registry parts.
 - Stable folder IDs (file IDs change; always find files by title inside these folders):
 
@@ -47,7 +47,7 @@ This prompt runs as a scheduled cloud agent every day at 6:00 am America/Chicago
 6. **Owner Status docs.** For each owner with activity since the last run, write `<Owner name> — Status` in `Teams/<Owner name>/`.
    - Sections: status, last 24 h, team (roles and what they did), waiting on Roman, next steps, key files.
    - Archive the previous doc.
-7. **Run log.** Create `YYYY-MM-DD brain claude rollup` in `Sessions/` with a header block (Owner: sam, Roles: Brain-ops). Include feeds written, any validation failures, requests applied or left, and anything that looked wrong.
+7. **Run log.** Create `YYYY-MM-DD brain claude rollup-HHMM` (America/Chicago date and time, so several runs on the same day get distinct titles) in `Sessions/` with a header block (Owner: sam, Roles: Brain-ops). Include feeds written, any validation failures, requests applied or left, and anything that looked wrong.
 
 ## Recipes
 
