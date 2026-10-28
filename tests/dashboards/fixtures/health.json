@@ -1,0 +1,102 @@
+{
+ "feed": "health",
+ "generated_at": "2026-10-27T11:00:00Z",
+ "domain": {
+  "name": "Health",
+  "status": "active",
+  "summary": "Example summary for Health. Fixture data, not real.",
+  "next_step": "Example next step",
+  "waiting": ""
+ },
+ "owners": [
+  {
+   "slug": "nadia",
+   "name": "Nadia Brooks",
+   "role": "Example role"
+  }
+ ],
+ "projects": [
+  {
+   "slug": "health",
+   "name": "Health",
+   "status": "active",
+   "owner": "nadia",
+   "next_step": "",
+   "drive_folder_url": "https://drive.google.com/drive/folders/example",
+   "repo_url": ""
+  }
+ ],
+ "roles": [
+  {
+   "owner": "nadia",
+   "role": "Example-role",
+   "purpose": "Example purpose",
+   "last_active": "2026-10-26",
+   "recent": [
+    "did an example thing (2026-10-26)"
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "code": "EX-001",
+   "project": "health",
+   "question": "Example question?",
+   "options": [
+    "a) Yes",
+    "b) No"
+   ],
+   "default": "a",
+   "default_date": "2026-11-01",
+   "blocks": "example"
+  }
+ ],
+ "sessions": [
+  {
+   "date": "2026-10-26",
+   "title": "2026-10-26 health claude example",
+   "owner": "nadia",
+   "project": "health",
+   "roles": [
+    "Example-role"
+   ],
+   "subagents": "1 \u2014 example",
+   "summary": "Example session.",
+   "next_step": "Example",
+   "url": "https://docs.google.com/document/d/example/edit"
+  }
+ ],
+ "files": [
+  {
+   "title": "Example file",
+   "url": "https://drive.google.com/file/d/example/view",
+   "kind": "doc",
+   "updated": "2026-10-20"
+  }
+ ],
+ "artifacts": [
+  {
+   "title": "Example artifact",
+   "url": "https://claude.ai/artifact/example",
+   "updated": "2026-10-01"
+  }
+ ],
+ "panels": {
+  "appointments": [
+   {
+    "date": "2026-11-10",
+    "what": "Example appointment",
+    "status": "scheduled"
+   }
+  ],
+  "claims": [
+   {
+    "date": "2026-10-01",
+    "what": "Example claim",
+    "amount": 120,
+    "status": "pending"
+   }
+  ],
+  "results": []
+ }
+}

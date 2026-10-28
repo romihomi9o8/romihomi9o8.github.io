@@ -1,0 +1,53 @@
+<title>Chord HQ</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/*@KIT_CSS*/
+/* page-specific styles below, built only from the kit tokens */
+.timeline { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0; position: relative; }
+.tl { position: relative; display: grid; gap: 4px; align-content: start; padding: 22px 12px 4px 0; min-width: 0; }
+.tl::before { content: ""; position: absolute; top: 6px; left: 0; right: 0; height: 2px; background: var(--line); }
+.tl-done::before { background: var(--accent); }
+.tl-dot { position: absolute; top: 0; left: 0; width: 14px; height: 14px; border-radius: 50%; background: var(--surface); border: 2px solid var(--text-3); }
+.tl-done .tl-dot { background: var(--accent); border-color: var(--accent); }
+.tl-warn .tl-dot { border-color: var(--warn); border-style: dashed; background: var(--warn-bg); }
+.tl-name { font-weight: 600; font-size: 15px; }
+.tl-title { font-weight: 500; }
+.tl .chip { justify-self: start; }
+.tl-note { font-size: 12.5px; }
+.gallery { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); }
+.gal-col { display: grid; gap: 6px; align-content: start; min-width: 0; }
+.gal-col h3 { border-bottom: 1px solid var(--line); padding-bottom: 6px; }
+.gal-col ul { display: grid; gap: 0; }
+.gal-col li { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; padding: 6px 0; border-bottom: 1px solid var(--line); min-width: 0; }
+.gal-link { font-weight: 500; overflow-wrap: anywhere; }
+.gal-col .mono { font-size: 12px; white-space: nowrap; }
+.held { border-top: 1px dashed var(--warn); padding-top: 10px; display: grid; gap: 8px; }
+.held .questions > li { border-left-color: var(--warn); }
+@media (max-width: 560px) {
+  .timeline { grid-template-columns: 1fr; }
+  .tl { padding: 0 0 14px 28px; }
+  .tl::before { top: 0; bottom: 0; left: 6px; right: auto; width: 2px; height: auto; }
+  .tl-dot { top: 2px; }
+}
+</style>
+<main id="app" aria-live="polite"></main>
+<script>
+document.documentElement.dataset.domain = "chord";
+/*@KIT_JS*/
+/*@PANELS_JS*/
+boot({
+  feed: "chord",
+  render: (feed, file, mcp) => [
+    headerBlock(feed, file),
+    statusPanel(feed),
+    galleryPanel(feed),
+    milestonesPanel(feed),
+    chordQuestionsPanel(feed.questions),
+    teamPanel(feed),
+    sessionsPanel(feed.sessions),
+    filesPanel(feed),
+  ],
+});
+</script>

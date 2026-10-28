@@ -1,0 +1,42 @@
+<title>Brain HQ</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/*@KIT_CSS*/
+/* page-specific styles below, built only from the kit tokens */
+.wait-groups { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); align-items: start; }
+.wait-group { display: grid; gap: 8px; min-width: 0; padding: 10px 12px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface-2); }
+.wait-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; }
+.q-line .q-text { flex: 1 1 200px; min-width: 0; font-weight: 500; }
+.held, .wait-group.held { opacity: .6; }
+.cards { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr)); }
+.card { display: grid; gap: 6px; align-content: start; padding: 12px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface-2); min-width: 0; }
+.card-top { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.card-next { font-size: 13px; overflow-wrap: anywhere; }
+.card-meta { display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap; font-size: 12px; }
+.card-open { display: block; text-align: center; padding: 10px 12px; margin-top: 4px; border-radius: 6px; background: var(--accent); color: var(--bg); font-weight: 600; text-decoration: none; }
+.card-open:hover { filter: brightness(1.08); }
+.card-open.off { background: var(--muted-bg); color: var(--muted); }
+.rosters { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); align-items: start; }
+.rosters .team + .team { border-top: 0; padding-top: 0; }
+td { overflow-wrap: anywhere; }
+table { min-width: 560px; }
+@media (max-width: 560px) { .dash-title h1 { font-size: 22px; } .panel { padding: 12px; } }
+</style>
+<main id="app" aria-live="polite"></main>
+<script>
+/*@KIT_JS*/
+/*@PANELS_JS*/
+boot({
+  feed: "hq",
+  render: (feed) => [
+    hqHeader(feed),
+    waitingPanel(feed),
+    domainCards(feed),
+    areasPanel(feed),
+    sessions24(feed),
+    teamsPanel(feed),
+  ],
+});
+</script>

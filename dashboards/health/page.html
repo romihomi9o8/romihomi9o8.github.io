@@ -1,0 +1,32 @@
+<!-- Copy to dashboards/<name>/page.html. Built from page.template.html. Publish dashboards/dist/<name>.html after `node dashboards/build.mjs <name>`. -->
+<title>Health Desk</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/*@KIT_CSS*/
+/* page-specific styles below, built only from the kit tokens */
+.h-rows { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.h-rows li { display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: baseline; }
+.h-rows li.is-past { opacity: .6; }
+</style>
+<main id="app" aria-live="polite"></main>
+<script>
+document.documentElement.dataset.domain = "health";
+/*@KIT_JS*/
+/*@PANELS_JS*/
+boot({
+  feed: "health",
+  render: (feed, file, mcp) => [
+    headerBlock(feed, file),
+    statusPanel(feed),
+    appointmentsPanel(feed.panels.appointments),
+    claimsPanel(feed.panels.claims),
+    resultsPanel(feed.panels.results),
+    trainingPanel(feed.panels.training),
+    questionsPanel(feed.questions),
+    sessionsPanel(feed.sessions),
+    filesPanel(feed),
+  ],
+});
+</script>

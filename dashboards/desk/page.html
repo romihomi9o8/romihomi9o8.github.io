@@ -1,0 +1,42 @@
+<!-- Copy to dashboards/<name>/page.html. Replace NAME, DOMAIN and FEED. Publish dashboards/dist/<name>.html after `node dashboards/build.mjs <name>`. -->
+<title>Agentic Desk</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/*@KIT_CSS*/
+/* page-specific styles below, built only from the kit tokens */
+.guardrail { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: baseline; background: var(--accent-soft); border: 1px solid var(--accent); border-radius: var(--radius); padding: 10px 14px; color: var(--text); }
+.guardrail strong { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
+.applink { display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: baseline; border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: var(--radius); background: var(--surface); padding: 12px 14px; text-decoration: none; color: var(--text); }
+.applink strong { color: var(--accent); }
+.applink:hover { border-color: var(--accent); }
+.board { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); align-items: start; }
+.bcol { display: grid; gap: 8px; background: var(--surface-2); border-radius: var(--radius); padding: 10px; border-top: 3px solid var(--line); }
+.bcol-bad { border-top-color: var(--bad); } .bcol-ok { border-top-color: var(--ok); } .bcol-warn { border-top-color: var(--warn); }
+.bcol h3 { font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--text-2); }
+.bcard { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 10px; display: grid; gap: 4px; }
+.bcard-top { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; flex-wrap: wrap; }
+.tests { font-size: 12px; }
+.bcard p { margin: 0; font-size: 13px; }
+</style>
+<main id="app" aria-live="polite"></main>
+<script>
+document.documentElement.dataset.domain = "desk";
+/*@KIT_JS*/
+/*@PANELS_JS*/
+boot({
+  feed: "desk",
+  render: (feed, file, mcp) => [
+    headerBlock(feed, file),
+    guardrailBanner(feed.panels),
+    appLink(feed),
+    statusPanel(feed),
+    workstreamBoard((feed.panels || {}).workstreams),
+    questionsPanel(feed.questions),
+    teamPanel(feed),
+    sessionsPanel(feed.sessions),
+    filesPanel(feed),
+  ],
+});
+</script>
